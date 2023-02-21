@@ -1,0 +1,386 @@
+@font-face {
+  font-family: 'Inter';
+  src: local('Inter ThinBETA'), local('Inter-ThinBETA'),
+    url('../fonts/Inter-ThinBETA.woff2') format('woff2'),
+    url('../fonts/Inter-ThinBETA.woff') format('woff'),
+    url('../fonts/Inter-ThinBETA.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: local('Inter ExtraLightBETA'), local('Inter-ExtraLightBETA'),
+    url('../fonts/Inter-ExtraLightBETA.woff2') format('woff2'),
+    url('../fonts/Inter-ExtraLightBETA.woff') format('woff'),
+    url('../fonts/Inter-ExtraLightBETA.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: local('Inter LightBETA'), local('Inter-LightBETA'),
+    url('../fonts/Inter-LightBETA.woff2') format('woff2'),
+    url('../fonts/Inter-LightBETA.woff') format('woff'),
+    url('../fonts/Inter-LightBETA.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: local('Inter Medium'), local('Inter-Medium'),
+    url('../fonts/Inter-Medium.woff2') format('woff2'),
+    url('../fonts/Inter-Medium.woff') format('woff'),
+    url('../fonts/Inter-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: local('Inter Bold'), local('Inter-Bold'),
+    url('../fonts/Inter-Bold.woff2') format('woff2'),
+    url('../fonts/Inter-Bold.woff') format('woff'),
+    url('../fonts/Inter-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: local('Inter Black'), local('Inter-Black'),
+    url('../fonts/Inter-Black.woff2') format('woff2'),
+    url('../fonts/Inter-Black.woff') format('woff'),
+    url('../fonts/Inter-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+
+  color: rgb(255, 255, 255);
+  font-family: 'Inter';
+  font-size: 18px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+a,
+a:link,
+a:hover,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Container */
+.container {
+  width: 100vw;
+  max-width: 1920px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+/* Button */
+button {
+  border: 0;
+  background-color: rgb(200, 0, 0);
+  color: rgb(255, 255, 255);
+  font-family: 'Inter';
+  font-weight: 900;
+
+  transition: background-color .4s ease;
+}
+
+button:hover {
+  background-color: rgb(146, 0, 0);
+}
+
+button span {
+  text-transform: uppercase;
+  font-size: calc(10px + 14 * ((100vw - 320px) / 1600));
+  font-weight: 900;
+}
+
+/* Discord icon */
+.discord {
+  display: block;
+  width: 2.5rem;
+  height: 2rem;
+  position: absolute;
+
+  transition: filter .4s ease;
+
+  right: 1rem;
+  bottom: 1rem;
+}
+
+.discord:hover {
+  filter: invert(54%) sepia(67%) saturate(521%) hue-rotate(193deg) brightness(89%) contrast(89%);
+}
+
+.discord img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Home */
+.home {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  background-image: url('../img/bg_glow.png'), linear-gradient(rgb(24, 24, 29), rgb(24, 24, 29));
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.home-content {
+  padding-top: calc(46px + 36.63 * ((100vw - 320px) / 1600));
+  padding-bottom: calc(116px + 160 * ((100vw - 320px) / 1600));
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+
+.home-logo {
+  display: block;
+  width: calc(228px + 133 * ((100vw - 320px) / 1600));
+  padding-bottom: calc(5px + 33.72 * ((100vw - 320px) / 1600));
+}
+
+.home-title {
+  display: block;
+  padding-bottom: calc(5px + 10 * ((100vw - 320px) / 1600));
+
+  font-size: calc(24px + 56 * ((100vw - 320px) / 1600));
+  font-weight: 900;
+}
+
+.home-subtitle {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: calc(14px + 21 * ((100vw - 320px) / 1600));
+  font-weight: 100;
+}
+
+.home-content button {
+  margin-top: calc(77px + 17 * ((100vw - 320px) / 1600));
+  padding-top: calc(12px + 13 * ((100vw - 320px) / 1600));
+  padding-right: calc(20px + 20 * ((100vw - 320px) / 1600));
+  padding-bottom: calc(12px + 13 * ((100vw - 320px) / 1600));
+  padding-left: calc(20px + 20 * ((100vw - 320px) / 1600));
+}
+
+/* Login */
+.login {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+
+  background-image: url('../img/bg_glow.png'), linear-gradient(rgb(24, 24, 29), rgb(24, 24, 29));
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.login-content {
+  width: 100%;
+  height: 100%;
+  padding-top: calc(12px + 36 * ((100vw - 320px) / 1600));
+  padding-right: calc(24px + 90 * ((100vw - 320px) / 1600));
+  padding-bottom: calc(12px + 36 * ((100vw - 320px) / 1600));
+  padding-left: calc(24px + 90 * ((100vw - 320px) / 1600));
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.login-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.login-logo-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: calc(10px + 17 * ((100vw - 320px) / 1600));
+}
+
+.login-logo {
+  display: block;
+  width: calc(38.88px + 126.58 * ((100vw - 320px) / 1600));
+}
+
+.login-title-content {
+  height: calc(35px + 65 * ((100vw - 320px) / 1600));
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.login-title {
+  font-size: calc(24px + 24 * ((100vw - 320px) / 1600));
+  font-weight: 900;
+}
+
+.login-subtitle {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: calc(12px + 12 * ((100vw - 320px) / 1600));
+  font-weight: 100;
+}
+
+.login-delimiter {
+  content: '';
+  display: block;
+  width: 5px;
+  height: calc(35px + 65 * ((100vw - 320px) / 1600));
+
+  background-color: rgb(255, 0, 0);
+}
+
+.login-authorization {
+  font-size: calc(16px + 4 * ((100vw - 320px) / 1600));
+  font-weight: 900;
+}
+
+.login-header .discord {
+  position: static;
+
+  width: calc(40px + 40 * ((100vw - 320px) / 1600));
+  height: calc(30.96px + 30.97 * ((100vw - 320px) / 1600));
+}
+
+.login-entercode {
+  width: calc(296px + 316 * ((100vw - 320px) / 1600));
+  height: calc(122px + 191 * ((100vw - 320px) / 1600));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.entercode-title {
+  padding-bottom: calc(19px + 27 * ((100vw - 320px) / 1600));
+
+  font-size: calc(16px + 20 * ((100vw - 320px) / 1600));
+  font-weight: 700;
+  text-transform: uppercase;
+
+  color: rgb(255, 0, 0);
+}
+
+.login-entercode form {
+  display: flex;
+  align-items: center;
+}
+
+.login-entercode form input {
+  width: calc(22.17px + 34.83 * ((100vw - 320px) / 1600));
+  height: calc(30.79px + 48.21 * ((100vw - 320px) / 1600));
+  margin-right: calc(8.17px + 12.83 * ((100vw - 320px) / 1600));
+  text-align: center;
+
+  border: 3px solid rgba(255, 0, 0, 0.3);
+  background: none;
+  font-size: calc(16px + 20 * ((100vw - 320px) / 1600));
+  font-weight: 900;
+  color: rgba(255, 0, 0, 0.3);
+
+  transition: all 0.1s linear;
+}
+
+.login-entercode form input:last-child {
+  margin-right: 0;
+}
+
+.login-entercode form input:focus {
+  color: rgb(255, 0, 0);
+  border-color: rgb(255, 0, 0);
+  outline: 0;
+}
+
+/* description */
+.description {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.description-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-left: calc(7px + 19 * ((100vw - 320px) / 1600));
+  row-gap: calc(12px + 46 * ((100vw - 320px) / 1600));
+
+  border-left: 15px solid rgb(255, 0, 0);
+}
+
+.description-title {
+  width: auto;
+  font-size: calc(18px + 18 * ((100vw - 320px) / 1600));
+  font-weight: 700;
+}
+
+.description-text {
+  width: auto;
+  font-size: calc(9px + 9 * ((100vw - 320px) / 1600));
+  font-weight: 700;
+}
+
+@media (max-width: 800px) {
+  .login-logo-content {
+    width: 100%;
+  }
+
+  .login-title-content {
+    display: none;
+  }
+
+  .login-delimiter {
+    display: none;
+  }
+
+  .login .discord {
+    position: absolute;
+
+    right: 1rem;
+    bottom: 1rem;
+  }
+
+  .description {
+    flex-direction: column;
+    row-gap: 27px;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+}
