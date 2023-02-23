@@ -23,7 +23,7 @@ const showMoreButton = [...document.querySelectorAll('.show-more')];
 const showMoreName = 'show-more';
 
 document.addEventListener('click', (event) => {
-  const el = event.target;
+  const el = event.target.parentNode;
   const classNameEl = event.target.className;
   const classNameParentEl = event.target.parentNode.className;
 
@@ -31,13 +31,23 @@ document.addEventListener('click', (event) => {
     classNameEl === showMoreName ||
     classNameParentEl === showMoreName
   ) {
-    let showMorePanel = el.parentNode.querySelector('.storage-item-more-content');
+    let panel = el.parentNode.querySelector('.storage-item-more-content');
 
-    if (!showMorePanel) {
-      showMorePanel = el.parentNode.querySelector('.delivery-item-more-content');
+    if (!panel) {
+      panel = el.parentNode.querySelector('.delivery-item-more-content');
     }
 
-    showMorePanel.classList.toggle('active');
+    panel.classList.toggle('active');
+  } else {
+    let panel = document.querySelector('.storage-item-more-content.active');
+
+    if (!panel) {
+      panel = document.querySelector('.delivery-item-more-content.active');
+    }
+
+    if (panel) {
+      panel.classList.remove('active');
+    }
   }
 })
 
