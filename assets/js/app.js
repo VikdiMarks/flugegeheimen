@@ -31,7 +31,11 @@ document.addEventListener('click', (event) => {
     classNameEl === showMoreName ||
     classNameParentEl === showMoreName
   ) {
-    const showMorePanel = el.parentNode.querySelector('.storage-item-more-content');
+    let showMorePanel = el.parentNode.querySelector('.storage-item-more-content');
+
+    if (!showMorePanel) {
+      showMorePanel = el.parentNode.querySelector('.delivery-item-more-content');
+    }
 
     showMorePanel.classList.toggle('active');
   }
