@@ -17,3 +17,31 @@ inputElements.forEach((ele, index) => {
     }
   })
 })
+
+//* SHOW MORE 
+const showMoreButton = [...document.querySelectorAll('.show-more')];
+const showMoreName = 'show-more';
+
+document.addEventListener('click', (event) => {
+  const el = event.target;
+  const classNameEl = event.target.className;
+  const classNameParentEl = event.target.parentNode.className;
+
+  if (
+    classNameEl === showMoreName ||
+    classNameParentEl === showMoreName
+  ) {
+    const showMorePanel = el.parentNode.querySelector('.storage-item-more-content');
+
+    showMorePanel.classList.toggle('active');
+  }
+})
+
+//* BURGER MENU
+const burgerButton = document.querySelector('.burger');
+const panelLinks = document.querySelector('.panel-links');
+
+burgerButton.addEventListener('click', () => {
+  burgerButton.classList.toggle('active')
+  panelLinks.classList.toggle('active')
+})
