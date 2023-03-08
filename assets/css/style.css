@@ -980,7 +980,7 @@ button span {
   bottom: 10%;
   left: 35%;
 
-  z-index: 111;
+  z-index: 1;
 }
 
 .profile-info {
@@ -1088,17 +1088,24 @@ button span {
 
   background: none;
   cursor: pointer;
+  opacity: 0.4;
 
   right: 120px;
   bottom: 60px;
 
-  z-index: 111;
+  z-index: 1;
+
+  transition: opacity .3s ease;
+}
+
+.profile-inner .logout:hover {
+  opacity: 1;
 }
 
 .profile-inner .logout span {
   font-size: calc(12px + 8 * ((100vw - 320px) / 1600));
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255);
   text-transform: unset;
 }
 
@@ -1567,5 +1574,11 @@ button span {
   .storage .panel-links,
   .delivery .panel-links {
     width: 100%;
+  }
+}
+
+@media (min-width: 1920px) {
+  .logo {
+    width: 70px;
   }
 }

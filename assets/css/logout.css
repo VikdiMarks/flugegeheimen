@@ -1,0 +1,21 @@
+.profile-inner .logout {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  column-gap: calc(6px + 6 * ((100vw - 320px) / 1600));
+
+  background: none;
+  cursor: pointer;
+  opacity: 0.4;
+
+  right: 120px;
+  bottom: 60px;
+
+  z-index: 1;
+
+  transition: opacity .3s ease;
+}
+
+.profile-inner .logout:hover {
+  opacity: 1;
+}
